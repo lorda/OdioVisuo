@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:700);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One);
+@import url(http://fonts.googleapis.com/css?family=Lato:900);
+@import url(http://fonts.googleapis.com/css?family=Gravitas+One);
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #19232E;
+  overflow: hidden;
+}
+
+#container:before {
+  position: absolute;
+  content: "";
+  z-index: 0;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+#container:after {
+  background: url("../img/noise-1.png");
+  position: absolute;
+  /* content: ""; Enlevé parce que ça causait un prob avec les events dans #playlist */
+  z-index: 0;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+#sectionInfos {
+    position: absolute;
+    display: block;
+    width: 600px;
+    height: auto;
+    top: 15%;
+    left: 12%;
+    color: #ffffff;
+}
+
+#sectionInfos h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.nomMorceau {
+    font-family: 'Abril Fatface', serif;
+    font-size: 80px;
+}
+
+.nomArtiste {
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+    padding-left: 20px;
+}
+
+audio {
+    position: absolute;
+    z-index: 2;
+    height: 75%;
+    overflow: auto;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 30%;
+}
+
+.message {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 1.2;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  margin-left: -180px;
+  margin-top: -30px;
+  font-size: 13px;
+  padding: 20px;
+  display: none;
+  z-index: 3;
+  height: 60px;
+  width: 360px;
+  color: white;
+  left: 50%;
+  top: 50%;
+}
+.message h1, .message h2 {
+  font-weight: 300;
+  margin: 10px 0;
+}
+.message h1 a, .message h2 a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #1b676b;
+}
+
+#playlist {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 3px;
+    margin-top: 25px;
+}
+
+#playlist ul {
+    padding: 0;
+    padding-left: 20px;
+}
+
+#playlist li , a {
+    padding-bottom: 12px;
+    padding-left: 0;
+    list-style-type: none;
+    color: #d5d5d5;
+    text-decoration: none;
+}
+
+#playlist li:last-child {
+    padding-bottom: 0;
+}
+
+#playlist .trackName {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#playlist .artist {
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+    padding-left: 23px;
+}
+
+.morceauEnCours {
+    list-style-type: disc;
+}
